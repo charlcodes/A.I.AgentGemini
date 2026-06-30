@@ -16,15 +16,6 @@ def get_file_content(working_directory: str, file_path: str) -> str:
     if not Path(target_file).is_file():
         return f'Error: File not found or is not a regular file: "{file_path}"'
     
-    '''if os.path.exists("my_file.txt"):
-        print("File exists!")
-    
-    else:
-        print("File does not exist.")
-'''
-    '''with open("", mode="r", encoding="utf-8") as file:
-        content = file.read(1000)
-'''
     with open(target_file, mode="r", encoding="utf-8") as file:
         content = file.read(MAX_CHARS)
         if file.read(1):
